@@ -1,0 +1,99 @@
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\ООО Спорт.exe.config
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\ООО Спорт.exe
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\ООО Спорт.pdb
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\Microsoft.Bcl.HashCode.dll
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\Microsoft.EntityFrameworkCore.Design.dll
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\Microsoft.EntityFrameworkCore.dll
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\Microsoft.Extensions.Caching.Abstractions.dll
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\Microsoft.Extensions.Caching.Memory.dll
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\Microsoft.Extensions.Configuration.Binder.dll
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\Microsoft.Extensions.Configuration.dll
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\Microsoft.Extensions.Logging.dll
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\Microsoft.Extensions.Options.dll
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\Microsoft.Extensions.Primitives.dll
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\System.Buffers.dll
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\System.Collections.Immutable.dll
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\System.ComponentModel.Annotations.dll
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\System.Memory.dll
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\System.Numerics.Vectors.dll
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\Microsoft.Bcl.HashCode.xml
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\Microsoft.EntityFrameworkCore.xml
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\Microsoft.EntityFrameworkCore.Abstractions.xml
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\Microsoft.EntityFrameworkCore.Design.xml
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\Microsoft.EntityFrameworkCore.Relational.xml
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\Microsoft.Extensions.Caching.Abstractions.xml
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\Microsoft.Extensions.Caching.Memory.xml
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\Microsoft.Extensions.Configuration.xml
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.xml
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\Microsoft.Extensions.Configuration.Binder.xml
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\Microsoft.Extensions.DependencyInjection.xml
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\Microsoft.Extensions.Logging.xml
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\Microsoft.Extensions.Options.xml
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\Microsoft.Extensions.Primitives.xml
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\System.Buffers.xml
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\System.Collections.Immutable.xml
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\System.Memory.xml
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\System.Numerics.Vectors.xml
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\obj\Debug\ООО Спорт.csproj.AssemblyReference.cache
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\obj\Debug\ООО Спорт.csproj.SuggestedBindingRedirects.cache
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\obj\Debug\MainWindow.g.cs
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\obj\Debug\App.g.cs
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\obj\Debug\ООО Спорт_MarkupCompile.cache
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\obj\Debug\ООО Спорт_MarkupCompile.lref
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\obj\Debug\MainWindow.baml
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\obj\Debug\ООО Спорт.g.resources
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\obj\Debug\ООО_Спорт.Properties.Resources.resources
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\obj\Debug\ООО Спорт.csproj.GenerateResource.cache
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\obj\Debug\ООО Спорт.csproj.CoreCompileInputs.cache
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\obj\Debug\ООО Спорт.csproj.CopyComplete
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\obj\Debug\ООО Спорт.exe
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\obj\Debug\ООО Спорт.pdb
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\Microsoft.Data.SqlClient.dll
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\Microsoft.Identity.Client.dll
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\Microsoft.IdentityModel.Logging.dll
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\Microsoft.IdentityModel.Protocols.dll
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\Newtonsoft.Json.dll
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\Microsoft.Data.SqlClient.pdb
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\Microsoft.Data.SqlClient.xml
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\Microsoft.EntityFrameworkCore.SqlServer.xml
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\Microsoft.Identity.Client.xml
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\Microsoft.IdentityModel.Logging.xml
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\Microsoft.IdentityModel.Protocols.xml
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\Microsoft.IdentityModel.Protocols.OpenIdConnect.xml
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\Microsoft.IdentityModel.Tokens.xml
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\Newtonsoft.Json.xml
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\de\Microsoft.Data.SqlClient.resources.dll
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\es\Microsoft.Data.SqlClient.resources.dll
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\fr\Microsoft.Data.SqlClient.resources.dll
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\it\Microsoft.Data.SqlClient.resources.dll
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\ja\Microsoft.Data.SqlClient.resources.dll
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\ko\Microsoft.Data.SqlClient.resources.dll
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\pt-BR\Microsoft.Data.SqlClient.resources.dll
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\ru\Microsoft.Data.SqlClient.resources.dll
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\zh-Hans\Microsoft.Data.SqlClient.resources.dll
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\bin\Debug\zh-Hant\Microsoft.Data.SqlClient.resources.dll
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\obj\Debug\Products.g.cs
+D:\Документы\Шарага\Демо\Пробный\ООО Спорт\ООО Спорт\obj\Debug\Products.baml

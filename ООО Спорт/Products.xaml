@@ -1,0 +1,16 @@
+﻿<Window x:Class="ООО_Спорт.Products"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ООО_Спорт"
+        mc:Ignorable="d"
+        Title="Товары" Height="1920" Width="1080" IsVisibleChanged="Window_IsVisibleChanged" Closing="Window_Closing" ResizeMode="NoResize" WindowState ="Maximized">
+    <ScrollViewer>
+        <Grid x:Name="ProductsGrid" HorizontalAlignment="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+        </Grid>
+    </ScrollViewer>
+</Window>

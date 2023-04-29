@@ -1,0 +1,48 @@
+﻿<Window x:Class="ООО_Спорт.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ООО_Спорт"
+        mc:Ignorable="d"
+        Title="Авторизация" Height="450" Width="800" Closing="Window_Closing">
+    <Window.Resources>
+        <Style x:Key="Text">
+            <Setter Property="ItemsControl.FontSize" Value="20"/>
+            <Setter Property="ItemsControl.HorizontalAlignment" Value="Right"/>
+            <Setter Property="ItemsControl.Margin" Value="5"/>
+        </Style>
+        <Style x:Key="TextBox">
+            <Setter Property="ItemsControl.FontSize" Value="20"/>
+            <Setter Property="ItemsControl.VerticalAlignment" Value="Top"/>
+            <Setter Property="ItemsControl.Margin" Value="5"/>
+        </Style>
+        <Style x:Key="Button">
+            <Setter Property="ItemsControl.FontSize" Value="20"/>
+            <Setter Property="ItemsControl.VerticalAlignment" Value="Center"/>
+            <Setter Property="ItemsControl.HorizontalAlignment" Value="Center"/>
+            <Setter Property="ItemsControl.Padding" Value="10"/>
+            <Setter Property="ItemsControl.Margin" Value="5"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0.5*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="1" Style="{StaticResource Text}">Логин:</TextBlock>
+        <TextBox Grid.Row="1" Grid.Column="1" Style="{StaticResource TextBox}" x:Name="loginTB"/>
+        <TextBlock Grid.Row="2" Style="{StaticResource Text}">Пароль:</TextBlock>
+        <TextBox Grid.Row="2" Grid.Column="1" Style="{StaticResource TextBox}" x:Name="PasswordTB"/>
+        <Button Grid.Row="3" Style="{StaticResource Button}" HorizontalAlignment="Right" Click="Button_Click">Войти</Button>
+        <Button Grid.Row="3" Grid.Column="1" Style="{StaticResource Button}" Click="Button_Click_1">Войти как гость</Button>
+    </Grid>
+</Window>
