@@ -5,12 +5,46 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ООО_Спорт"
         mc:Ignorable="d"
-        Title="Товары" Height="1920" Width="1080" IsVisibleChanged="Window_IsVisibleChanged" Closing="Window_Closing" ResizeMode="NoResize" WindowState ="Maximized">
+        Title="Товары" Height="1080" Width="1920" IsVisibleChanged="Window_IsVisibleChanged" Closing="Window_Closing" ResizeMode="NoResize" WindowState ="Maximized">
+    <Window.Resources>
+        <Style x:Key="margin">
+            <Setter Property="ItemsControl.Margin" Value="10"/>
+        </Style>
+    </Window.Resources>
     <ScrollViewer>
-        <Grid x:Name="ProductsGrid" HorizontalAlignment="Center">
-            <Grid.RowDefinitions>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
+        <Grid HorizontalAlignment="Stretch">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid x:Name="ProductsGrid" Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+            </Grid>
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Width="200">
+                <TextBlock Style="{StaticResource margin}">Сортировка:</TextBlock>
+                <ComboBox x:Name="SortCB" SelectionChanged="ComboBox_SelectionChanged">
+                    <ComboBoxItem IsSelected="True">по умолчанию</ComboBoxItem>
+                    <ComboBoxItem>по возрастанию цены</ComboBoxItem>
+                    <ComboBoxItem>по убыванию цены</ComboBoxItem>
+                </ComboBox>
+                <TextBlock Style="{StaticResource margin}">Фильтр по размеру скидки:</TextBlock>
+                <ComboBox x:Name="FilterCB" SelectionChanged="FilterCB_SelectionChanged">
+                    <ComboBoxItem IsSelected="True">Все диапазоны</ComboBoxItem>
+                    <ComboBoxItem>0-9,99%</ComboBoxItem>
+                    <ComboBoxItem>10-14,99%</ComboBoxItem>
+                    <ComboBoxItem>15% и более</ComboBoxItem>
+                </ComboBox>
+                <TextBlock Style="{StaticResource margin}">Поиск:</TextBlock>
+                <TextBox x:Name="SearchTB" TextChanged="TextBox_TextChanged"/>
+                <TextBlock Style="{StaticResource margin}" Name="countTB" TextWrapping="Wrap">Количество выведенных товаров: </TextBlock>
+            </StackPanel>
+            <StackPanel Grid.Column="2">
+                <TextBlock TextAlignment="Center" Style="{StaticResource margin}">ФИО:</TextBlock>
+                <TextBlock Name="nameTB" TextAlignment="Center"/>
+            </StackPanel>
         </Grid>
     </ScrollViewer>
 </Window>
