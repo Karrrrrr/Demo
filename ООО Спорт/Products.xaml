@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ООО_Спорт"
         mc:Ignorable="d"
-        Title="Товары" Height="1080" Width="1920" IsVisibleChanged="Window_IsVisibleChanged" Closing="Window_Closing" ResizeMode="NoResize" WindowState ="Maximized">
+        Title="Товары" Height="1080" Width="1920" IsVisibleChanged="Window_IsVisibleChanged" Closing="Window_Closing" ResizeMode="NoResize" WindowState ="Maximized" Activated="Window_Activated">
     <Window.Resources>
         <Style x:Key="margin">
             <Setter Property="ItemsControl.Margin" Value="10"/>
@@ -44,6 +44,7 @@
             <StackPanel Grid.Column="2">
                 <TextBlock TextAlignment="Center" Style="{StaticResource margin}">ФИО:</TextBlock>
                 <TextBlock Name="nameTB" TextAlignment="Center"/>
+                <Button HorizontalAlignment="Center" Padding="5" Click="Button_Click" Style="{StaticResource margin}" Name="CreateButton">Добавить товар</Button>
             </StackPanel>
         </Grid>
     </ScrollViewer>

@@ -110,7 +110,7 @@ namespace ООО_Спорт
 
 		private void Button_Click_1(object sender, RoutedEventArgs e)
 		{
-			Products.user = new User() { UserName = "Гость", UserSurname = "", UserPatronymic = "" };
+			Products.user = new User() { UserName = "Гость", UserSurname = "", UserPatronymic = "", UserRole = 1 };
 			Products p = new Products();
 			p.ShowDialog();
 		}

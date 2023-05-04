@@ -24,7 +24,6 @@ namespace ООО_Спорт
 	/// </summary>
 	public partial class Products : Window
 	{
-		string[] resources = { "B538G6", "D648N7", "D830R5", "E324U7", "F735B6", "F746E6", "F937G4", "G403T5", "G598Y6", "А112Т4" };
 		List<Product> filteredProducts = new List<Product>();
 		List<Product> searchedProducts = new List<Product>();
 		public static User user;
@@ -38,6 +37,14 @@ namespace ООО_Спорт
 		{
 			if (Visibility == Visibility.Visible)
 			{
+				if (user.UserRole == 2)
+				{
+					CreateButton.Visibility = Visibility.Visible;
+				}
+				else
+				{
+					CreateButton.Visibility = Visibility.Hidden;
+				}
 				filteredProducts = DatabaseConnection.GetProducts();
 				searchedProducts = filteredProducts.ToList();
 				productsCount = filteredProducts.Count;
@@ -60,9 +67,9 @@ namespace ООО_Спорт
 				StackPanel prod = new StackPanel() { Orientation = Orientation.Horizontal, Margin = new Thickness(10) };
 
 				Image image = new Image() { Width = 100, Height = 100 };
-				if (resources.Contains(product.ProductArticleNumber))
+				if (File.Exists(Environment.CurrentDirectory.Remove(Environment.CurrentDirectory.Length - 10) + @"/Resources/" + product.ProductArticleNumber + ".jpg") || File.Exists(Environment.CurrentDirectory.Remove(Environment.CurrentDirectory.Length - 10) + @"/Resources/" + product.ProductArticleNumber + ".png"))
 				{
-					image.Source = new BitmapImage(new Uri("Resources/" + product.ProductArticleNumber + ".jpg", UriKind.Relative));
+					image.Source = new BitmapImage(new Uri("Resources/" + product.ProductPhoto, UriKind.Relative));
 				}
 				else
 				{
@@ -100,6 +107,17 @@ namespace ООО_Спорт
 				prod.Children.Add(image);
 				prod.Children.Add(inf);
 				prod.Children.Add(discountTB);
+
+				prod.MouseUp += (o, e) =>
+				{
+					if (user.UserRole == 2)
+					{
+						CreateEditProduct.isCreate = false;
+						CreateEditProduct.product = product;
+						CreateEditProduct cep = new CreateEditProduct();
+						cep.ShowDialog();
+					}
+				};
 
 				ProductsGrid.Children.Add(prod);
 				Grid.SetRow(prod, n);
@@ -182,6 +200,21 @@ namespace ООО_Спорт
 				}
 				Sort(searchedProducts);
 			}
+		}
+
+		private void Button_Click(object sender, RoutedEventArgs e)
+		{
+			CreateEditProduct.isCreate = true;
+			CreateEditProduct cep = new CreateEditProduct();
+			cep.ShowDialog();
+        }
+
+		private void Window_Activated(object sender, EventArgs e)
+		{
+			filteredProducts = DatabaseConnection.GetProducts();
+			searchedProducts = filteredProducts.ToList();
+			productsCount = filteredProducts.Count;
+			LoadProducts(filteredProducts);
 		}
 	}
 }

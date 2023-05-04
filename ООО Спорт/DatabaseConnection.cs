@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices.ComTypes;
 using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 using ООО_Спорт.Context;
 using ООО_Спорт.Models;
 
@@ -79,7 +81,7 @@ namespace ООО_Спорт
 				{
 					foreach (Product product in db.Product)
 					{
-						if (product.ProductDiscountAmount > 15)
+						if (product.ProductDiscountAmount >= 15)
 						{
 							products.Add(product);
 						}
@@ -88,5 +90,33 @@ namespace ООО_Спорт
 				return products;
 			}
 		}
+
+		public static void CreateProduct(Product product)
+		{
+			using (EmployeeContext db = new EmployeeContext())
+			{
+				db.Product.Add(product);
+				db.SaveChanges();
+			}
+		}
+
+		public static void EditProduct(string article, string name, string description, string category, string image, string manufacture, decimal cost, byte discount, int quantity)
+		{
+			using (EmployeeContext db = new EmployeeContext())
+			{
+				Product product = db.Product.Find(article);
+				product.ProductName = name;
+				product.ProductDescription = description;
+				product.ProductCategory = category;
+				product.ProductPhoto = image;
+				product.ProductManufacturer = manufacture;
+				product.ProductDiscountAmount = discount;
+				product.ProductCost = cost;
+				product.ProductQuantityInStock = quantity;
+				db.SaveChanges();
+			}
+		}
+
+		
 	}
 }
