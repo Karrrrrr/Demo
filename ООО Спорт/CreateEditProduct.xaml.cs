@@ -63,6 +63,7 @@ namespace ООО_Спорт
 					if ((product.ProductPhoto != null) && (product.ProductPhoto != ""))
 					{
 						ImageButton.Content = product.ProductPhoto;
+						image = Environment.CurrentDirectory.Remove(Environment.CurrentDirectory.Length - 10) + @"/Resources/" + product.ProductPhoto;
 					}
 					else
 					{
@@ -144,7 +145,10 @@ namespace ООО_Спорт
 																		if (ImageButton.Content.ToString() != "Выбрать изображение")
 																		{
 																			thisImage = ArticleTB.Text + "." + image.Split('.').Last();
-																			File.Copy(image, Environment.CurrentDirectory.Remove(Environment.CurrentDirectory.Length - 10) + @"/Resources/" + thisImage, true);
+																			if (ImageButton.Content.ToString() != thisImage)
+																			{
+																				File.Copy(image, Environment.CurrentDirectory.Remove(Environment.CurrentDirectory.Length - 10) + @"/Resources/" + thisImage, true);
+																			}
 																		}
 																		DatabaseConnection.EditProduct(ArticleTB.Text, NameTB.Text, DescriptionTB.Text, category, thisImage, SupplierTB.Text, price, discount, quantity);
 																		Close();
@@ -234,7 +238,8 @@ namespace ООО_Спорт
 
 		private void DeleteButton_Click(object sender, RoutedEventArgs e)
 		{
-
+			DatabaseConnection.DeleteProduct(ArticleTB.Text);
+			Close();
 		}
 	}
 }

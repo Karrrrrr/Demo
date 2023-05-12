@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Runtime.InteropServices.ComTypes;
 using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web;
+using System.Windows.Controls;
 using ООО_Спорт.Context;
 using ООО_Спорт.Models;
 
@@ -117,6 +119,89 @@ namespace ООО_Спорт
 			}
 		}
 
-		
+		public static void DeleteProduct(string article)
+		{
+			using (EmployeeContext db = new EmployeeContext())
+			{
+				db.Product.Remove(db.Product.Find(article));
+				db.SaveChanges();
+			}
+		}
+
+		public static Order CreateOrder(string firstProductArticle)
+		{
+			Order order = new Order() { OrderPickupPoint = "1", OrderStatus = "Новый", OrderDeliveryDate = DateTime.Now.AddDays(3) };
+			using (EmployeeContext db = new EmployeeContext())
+			{
+				db.Order.Add(order);
+				OrderProduct op = new OrderProduct() { OrderId = order.OrderId, Order = order, ProductArticleNumber = firstProductArticle, ProductArticleNumberNavigation = db.Product.Find(firstProductArticle) };
+				db.OrderProduct.Add(op);
+				db.SaveChanges();
+				return order;
+			}
+		}
+
+		public static void AddProductToOrder(string productArticle, int orderId)
+		{
+			using (EmployeeContext db = new EmployeeContext())
+			{
+				if ((from x in db.OrderProduct where x.OrderId == orderId && x.ProductArticleNumber == productArticle select x).Count() == 0)
+				{
+					OrderProduct op = new OrderProduct() { OrderId = orderId, Order = db.Order.Find(orderId), ProductArticleNumber = productArticle, ProductArticleNumberNavigation = db.Product.Find(productArticle) };
+					db.OrderProduct.Add(op);
+					db.SaveChanges();
+				}
+			}
+		}
+
+		public static List<Product> GetCart(int orderId)
+		{
+			List<Product> products = new List<Product>();
+			using (EmployeeContext db = new EmployeeContext())
+			{
+				foreach (OrderProduct op in from x in db.OrderProduct where x.OrderId == orderId select x)
+				{
+					products.Add(db.Product.Find(op.ProductArticleNumber));
+				}
+			}
+			return products;
+		}
+
+		public static void ChangePickPoint(int orderId, string pickPoint)
+		{
+			using (EmployeeContext db = new EmployeeContext())
+			{
+				db.Order.Find(orderId).OrderPickupPoint = pickPoint;
+				db.SaveChanges();
+			}
+		}
+
+		public static Order GetCurrentOrder(int orderId)
+		{
+			using (EmployeeContext db = new EmployeeContext())
+			{
+				return db.Order.Find(orderId);
+			}
+		}
+
+		public static void DeleteOrderProduct(int orderId, string productArticle)
+		{
+			using (EmployeeContext db = new EmployeeContext())
+			{
+				OrderProduct op = (from x in db.OrderProduct where x.OrderId == orderId && x.ProductArticleNumber == productArticle select x).FirstOrDefault();
+				db.OrderProduct.Remove(op);
+				db.SaveChanges();
+			}
+		}
+
+		public static void DeleteOrder(int orderId, string productArticle)
+		{
+			DeleteOrderProduct(orderId, productArticle);
+			using (EmployeeContext db = new EmployeeContext())
+			{
+				db.Order.Remove(db.Order.Find(orderId));
+				db.SaveChanges();
+			}
+		}
 	}
 }

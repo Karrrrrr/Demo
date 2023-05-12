@@ -53,12 +53,22 @@ namespace ООО_Спорт
 				{
 					nameTB.Text = user.UserSurname + " " + user.UserName + " " + user.UserPatronymic;
 				}
+				if (Cart.order == null)
+				{
+					CartButton.Visibility = Visibility.Hidden;
+				}
+				else
+				{
+					CartButton.Visibility = Visibility.Visible;
+				}
 			}
 		}
 
 		private void LoadProducts(List<Product> products)
 		{
 			ProductsGrid.Children.Clear();
+			ProductsGrid.RowDefinitions.Clear();
+			ProductsGrid.RowDefinitions.Add(new RowDefinition());
 			int n = 1;
 			foreach (Product product in products)
 			{
@@ -67,9 +77,17 @@ namespace ООО_Спорт
 				StackPanel prod = new StackPanel() { Orientation = Orientation.Horizontal, Margin = new Thickness(10) };
 
 				Image image = new Image() { Width = 100, Height = 100 };
-				if (File.Exists(Environment.CurrentDirectory.Remove(Environment.CurrentDirectory.Length - 10) + @"/Resources/" + product.ProductArticleNumber + ".jpg") || File.Exists(Environment.CurrentDirectory.Remove(Environment.CurrentDirectory.Length - 10) + @"/Resources/" + product.ProductArticleNumber + ".png"))
+				if (File.Exists(Environment.CurrentDirectory.Remove(Environment.CurrentDirectory.Length - 10) + @"/Resources/" + product.ProductPhoto))
 				{
-					image.Source = new BitmapImage(new Uri("Resources/" + product.ProductPhoto, UriKind.Relative));
+					using (FileStream fs = File.OpenRead(Environment.CurrentDirectory.Remove(Environment.CurrentDirectory.Length - 10) + @"/Resources/" + product.ProductPhoto))
+					{
+						BitmapImage bi = new BitmapImage();
+						bi.BeginInit();
+						bi.CacheOption = BitmapCacheOption.OnLoad;
+						bi.StreamSource = fs;
+						bi.EndInit();
+						image.Source = bi;
+					}
 				}
 				else
 				{
@@ -83,14 +101,14 @@ namespace ООО_Спорт
 				StackPanel cost = new StackPanel() { Orientation = Orientation.Horizontal };
 				if (product.ProductDiscountAmount > 0)
 				{
-					TextBlock oldCost = new TextBlock() { Text = product.ProductCost.ToString(), TextDecorations = TextDecorations.Strikethrough, Margin = new Thickness(0, 0, 10, 0) };
-					TextBlock newCost = new TextBlock() { Text = (product.ProductCost - product.ProductCost * product.ProductDiscountAmount * 0.01m).ToString() };
+					TextBlock oldCost = new TextBlock() { Text = Math.Round(product.ProductCost, 2).ToString() + "₽", TextDecorations = TextDecorations.Strikethrough, Margin = new Thickness(0, 0, 10, 0) };
+					TextBlock newCost = new TextBlock() { Text = Math.Round((decimal)(product.ProductCost - product.ProductCost * product.ProductDiscountAmount * 0.01m), 2).ToString() + "₽" };
 					cost.Children.Add(oldCost);
 					cost.Children.Add(newCost);
 				}
 				else
 				{
-					TextBlock costTB = new TextBlock() { Text = product.ProductCost.ToString() };
+					TextBlock costTB = new TextBlock() { Text = Math.Round(product.ProductCost, 2).ToString() + "₽" };
 					cost.Children.Add(costTB);
 				}
 				inf.Children.Add(nameTB);
@@ -108,7 +126,7 @@ namespace ООО_Спорт
 				prod.Children.Add(inf);
 				prod.Children.Add(discountTB);
 
-				prod.MouseUp += (o, e) =>
+				prod.MouseLeftButtonUp += (o, e) =>
 				{
 					if (user.UserRole == 2)
 					{
@@ -116,6 +134,24 @@ namespace ООО_Спорт
 						CreateEditProduct.product = product;
 						CreateEditProduct cep = new CreateEditProduct();
 						cep.ShowDialog();
+					}
+				};
+
+				ContextMenu cm = new ContextMenu();
+				MenuItem add = new MenuItem() { Header = "Добавить в корзину" };
+				cm.Items.Add(add);
+				prod.ContextMenu = cm;
+
+				add.Click += (o, e) =>
+				{
+					if (Cart.order == null)
+					{
+						Cart.order = DatabaseConnection.CreateOrder(product.ProductArticleNumber);
+						CartButton.Visibility = Visibility.Visible;
+					}
+					else
+					{
+						DatabaseConnection.AddProductToOrder(product.ProductArticleNumber, Cart.order.OrderId);
 					}
 				};
 
@@ -215,6 +251,20 @@ namespace ООО_Спорт
 			searchedProducts = filteredProducts.ToList();
 			productsCount = filteredProducts.Count;
 			LoadProducts(filteredProducts);
+			if (Cart.order == null)
+			{
+				CartButton.Visibility = Visibility.Hidden;
+			}
+			else
+			{
+				CartButton.Visibility = Visibility.Visible;
+			}
+		}
+
+		private void CartButton_Click(object sender, RoutedEventArgs e)
+		{
+			Cart cart = new Cart();
+			cart.ShowDialog();
 		}
 	}
 }
