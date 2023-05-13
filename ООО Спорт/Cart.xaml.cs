@@ -216,8 +216,8 @@ namespace ООО_Спорт
 			code.Range.Font.Bold = 1;
 			code.Range.Font.Size = 14;
 
-			document.Words.Last.InsertBreak(Word.WdBreakType.wdPageBreak);
 			app.Visible = true;
+			document.SaveAs2(@"D:\Талон.pdf", Word.WdExportFormat.wdExportFormatPDF);
 		}
 	}
 }
